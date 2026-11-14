@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#a91d36" />
+  <title>LifeLink | Blood Donation Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-mark">✚</span><span>Life<span>Link</span><small> BLOOD DONATION NETWORK</small></span></a>
+      <nav><a href="#how">How it works</a><a href="#impact">Why donate?</a><button id="navLogin" class="btn btn-outline">Log in</button><button id="navJoin" class="btn btn-primary">Join the network</button></nav>
+    </header>
+
+    <main id="landing">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> EVERY DROP MAKES A DIFFERENCE</span>
+          <h1>Be someone's<br><em>reason to live.</em></h1>
+          <p>Connect with verified blood donors in your community. When every second matters, make finding help simpler.</p>
+          <div class="hero-actions"><button class="btn btn-primary btn-large" id="heroJoin">Become a donor <span>↗</span></button><button class="btn btn-light btn-large" id="heroSearch">Find blood donors</button></div>
+          <div class="trust-row"><div class="avatars"><b>R</b><b>A</b><b>S</b><b>+</b></div><span><strong>One community.</strong> Countless second chances.</span></div>
+        </div>
+        <div class="hero-art">
+          <div class="art-glow"></div><div class="blood-drop">✚</div>
+          <div class="floating-card card-top"><span class="mini-icon">♥</span><div><b>Give blood. Give life.</b><small>Your kindness matters.</small></div></div>
+          <div class="floating-card card-bottom"><span class="pulse">●</span><div><b>Local help, faster</b><small>Find donors by blood group & location</small></div></div>
+          <div class="art-caption">A little of you can mean everything to someone.</div>
+        </div>
+      </section>
+
+      <section class="stats" id="impact"><div><strong>8</strong><span>Blood groups supported</span></div><div><strong>24/7</strong><span>Community access</span></div><div><strong>1 life</strong><span>Can be changed by you</span></div><div><strong>100%</strong><span>People-powered purpose</span></div></section>
+
+      <section class="section" id="how"><div class="section-heading"><span class="eyebrow">SIMPLE. HUMAN. LIFE-SAVING.</span><h2>Help is closer than you think.</h2><p>Three simple steps to connect people who need blood with people ready to give.</p></div>
+        <div class="steps"><article><span class="step-no">01</span><div class="step-icon">♙</div><h3>Create your profile</h3><p>Register as a donor or recipient and share the details needed to connect safely.</p></article><article><span class="step-no">02</span><div class="step-icon">⌕</div><h3>Find a match</h3><p>Search available, verified donors using blood group and location filters.</p></article><article><span class="step-no">03</span><div class="step-icon">♡</div><h3>Connect & respond</h3><p>Send a request, receive a response, and keep track of the donation journey.</p></article></div>
+      </section>
+      <section class="cta-band"><div><span class="eyebrow">YOUR NEXT STEP COULD SAVE A LIFE</span><h2>Ready to make a difference?</h2><p>Join a network built around compassion and community.</p></div><button class="btn btn-white btn-large" id="ctaJoin">Get started <span>↗</span></button></section>
+    </main>
+
+    <main id="authView" class="hidden auth-wrap">
+      <button class="back-link" id="backHome">← Back to home</button>
+      <div class="auth-card"><div class="auth-side"><span class="brand-mark big">✚</span><span class="eyebrow">WELCOME TO LIFELINK</span><h2>Every connection<br>can change a life.</h2><p>A trusted community connecting blood donors and recipients, one match at a time.</p><div class="auth-note">“The smallest act of kindness is worth more than the grandest intention.”</div></div>
+      <div class="auth-form"><div class="form-tabs"><button class="active" data-tab="login">Log in</button><button data-tab="register">Create account</button></div>
+        <form id="loginForm"><h2>Welcome back</h2><p class="muted">Enter your details to access your account.</p><label>Email address<input name="email" type="email" placeholder="you@example.com" required></label><label>Password<input name="password" type="password" placeholder="Your password" required></label><button class="btn btn-primary full">Log in to LifeLink</button><p class="form-foot">New to LifeLink? <a data-switch="register">Create an account</a></p></form>
+        <form id="registerForm" class="hidden"><h2>Join the network</h2><p class="muted">Create your free community account.</p><div class="two-col"><label>Full name<input name="name" required placeholder="Your name"></label><label>Account type<select name="role" id="regRole"><option value="donor">Blood donor</option><option value="recipient">Recipient</option></select></label></div><label>Email address<input name="email" type="email" required placeholder="you@example.com"></label><label>Password<input name="password" type="password" minlength="8" required placeholder="At least 8 characters"></label><div id="donorFields"><div class="two-col"><label>Blood group<select name="bloodGroup"><option value="">Select group</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label><label>Phone number<input name="phone" placeholder="10-digit mobile"></label></div><div class="two-col"><label>City<input name="city" placeholder="e.g. Warangal"></label><label>District<input name="district" placeholder="District"></label></div><label>PIN code<input name="pincode" placeholder="PIN code"></label></div><button class="btn btn-primary full">Create my account</button><p class="form-foot">Already registered? <a data-switch="login">Log in</a></p></form>
+      </div></div>
+    </main>
+
+    <main id="dashboard" class="hidden dashboard">
+      <aside class="sidebar"><a class="brand" href="#"><span class="brand-mark">✚</span><span>Life<span>Link</span><small> YOUR DASHBOARD</small></span></a><div class="profile-mini"><div class="profile-avatar" id="avatarInitial">U</div><div><b id="sideName">User</b><small id="sideRole">Member</small></div></div><div class="side-label">WORKSPACE</div><div id="sideNav" class="side-nav"></div><button id="logoutBtn" class="logout">↪ &nbsp; Log out</button></aside>
+      <section class="dash-main"><header class="dash-header"><div><span class="eyebrow" id="dashEyebrow">LIFELINK COMMUNITY</span><h1 id="dashTitle">Good morning</h1></div><div class="header-right"><span class="live-dot">● &nbsp; Network active</span><div class="profile-avatar small" id="headerInitial">U</div></div></header><div id="dashContent"></div></section>
+    </main>
+    <div id="toast" class="toast"></div>
+    <footer><span>© 2026 LifeLink Blood Donation Portal</span><span>Made with care for every life <b>♥</b></span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
